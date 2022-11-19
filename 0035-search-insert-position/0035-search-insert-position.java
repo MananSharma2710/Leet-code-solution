@@ -4,7 +4,7 @@ class Solution {
         int last= nums.length-1;
         while(beg<=last)
         {
-            int mid=beg+(last-beg)/2;
+            int mid=(beg+last)/2;
             if(nums[mid]==target)
                 return mid;
             else if(nums[mid]>target)
