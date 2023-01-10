@@ -29,7 +29,7 @@ class Solution {
                 return mid;
             else if (mid> start && arr[mid]< arr[mid-1])
                 return mid-1;
-            else if(arr[start]== arr[mid] && arr[mid]== arr[end]){
+            if(arr[start]== arr[mid] && arr[mid]== arr[end]){
                 if(start<arr.length-1 && arr[start]>arr[start+1])
                     return start;
                 start++;
