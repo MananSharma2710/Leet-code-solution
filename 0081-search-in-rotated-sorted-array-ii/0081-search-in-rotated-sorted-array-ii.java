@@ -27,7 +27,7 @@ class Solution {
             int mid = start + (end-start)/2;
             if(mid < end && arr[mid] > arr[mid+1])
                 return mid;
-            if (mid> start && arr[mid]< arr[mid-1])
+            else if (mid> start && arr[mid]< arr[mid-1])
                 return mid-1;
             if(arr[start]== arr[mid] && arr[mid]== arr[end]){
                 if(start<arr.length-1 && arr[start]>arr[start+1])
