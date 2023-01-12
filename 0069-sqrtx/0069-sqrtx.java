@@ -1,14 +1,16 @@
 class Solution {
     public int mySqrt(int x) {
-        int i=1,s=0;
-        while(x>0)
-        {
-            x-=i;
-            i+=2;
-            s+=1;
+        int start=1;
+        int end=x;
+        while(start<=end){
+            int mid = start +(end-start)/2;
+            if(x/mid == mid)
+                return mid;
+            else if(x/mid < mid)
+                end = mid-1;
+            else
+                start=mid+1;
         }
-        if(x==0)
-            return s;
-        return s-1;
+        return end;
     }
 }
